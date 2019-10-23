@@ -12,7 +12,7 @@ The pushfish API server reads various options from a configuration file. This co
      ~/Library/Application Support/pushfish-api/pushfish-api.cfg # on OSX
 ```
 
-where the value for "user" will be changed to your current username. If this file does not exist, then the API server will generate a default configuration, which looks like this:
+If this file does not exist, then the API server will generate a default configuration, which looks like this:
 
 ```
 [database]
@@ -23,8 +23,6 @@ where the value for "user" will be changed to your current username. If this fil
 uri = sqlite:////home/pushfish/.local/share/pushfish-api/pushfish-api.db
 
 [dispatch]
-google_api_key = 
-google_gcm_sender_id = 509878466986
 #point this at the pushfish-connectors zeroMQ pubsub socket
 zeromq_relay_uri = 
 
@@ -50,7 +48,7 @@ Run:
 docker run pushfish-api:latest 
 ```
 
-Run tests.py:
+Optional: Run tests.py:
 
 ```
 docker run pushfish-api:latest python tests.py
